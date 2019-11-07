@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class Practice {
     public static void main(String[] args) {
-        Integer[] array1 = {3, 2};
+        /*Integer[] array1 = {3, 2};
         Integer[] array2 = {1};
         Integer[] array3 = {4, 12};
 
@@ -25,6 +25,13 @@ public class Practice {
             }
         }
         System.out.println(result);
+
+         */
+
+
+        String practiceString = "onetwothreefourfive";
+        boolean two = practiceString.contains("two");
+
 
     }
 }

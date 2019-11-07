@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/StringCalculatorTDDOnly/StringExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/StringCalculatorTDDOnly/WordsForNumberOperatorConversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/ryanaircar/Eurocar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/ryanaircar/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/Practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/NumbersInWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/StringExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/WordsForNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/MusifyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/MusifyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/StringExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/StringCalculatorTDDOnly/StringExpressionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/designpatttern/adaptor/BritishPersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/designpatttern/adaptor/BritishPersonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/Practice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/BritishPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/BritishPerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/BritishPlug.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/BritishPlug.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/EuropeanPlug.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/EuropeanPlug.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/EuropeanPlugAdaptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/EuropeanPlugAdaptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/UsePlug.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/UsePlug.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/manchesterdigital/designpattern/adaptor/UsePlugTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/manchesterdigital/designpattern/adaptor/UsePlugTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/manchesterdigital/designpatttern/adaptor/BritishPersonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/manchesterdigital/designpatttern/adaptor/BritishPersonTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,13 +38,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Arquillian JUnit Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1SKhTO8Ib8yjIckFKyfyxdxUflQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,12 +60,16 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.manchesterdigital.designpatttern.adaptor" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.manchesterdigital.bootcamp.StringCalculator" />
       <recent name="com.manchesterdigital.designpatterns" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -53,13 +88,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Arquillian JUnit.BritishPersonTest">
-    <configuration name="UsePlug" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.designpatttern.adaptor.UsePlug" />
+  <component name="RunManager" selected="Application.Triangle">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.Main" />
       <module name="playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.manchesterdigital.designpatttern.adaptor.*" />
+          <option name="PATTERN" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,53 +102,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BritishPersonTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
+    <configuration name="StringCalculatorMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.StringCalculator.StringCalculatorMain" />
       <module name="playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.manchesterdigital.designpatttern.adaptor.*" />
+          <option name="PATTERN" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="PACKAGE_NAME" value="com.manchesterdigital.designpatttern.adaptor" />
-      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.designpatttern.adaptor.BritishPersonTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsePlugTest.europeanPlugTwoProngsReturnsICanWorkInEurope" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Triangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.Triangle" />
       <module name="playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.manchesterdigital.designpattern.adaptor.*" />
+          <option name="PATTERN" value="com.manchesterdigital.bootcamp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.manchesterdigital.designpattern.adaptor" />
-      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.designpattern.adaptor.UsePlugTest" />
-      <option name="METHOD_NAME" value="europeanPlugTwoProngsReturnsICanWorkInEurope" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringExpressionTest.ifGivenOnePlusTwoReturnThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly" />
+      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.StringExpressionTest" />
+      <option name="METHOD_NAME" value="ifGivenOnePlusTwoReturnThree" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsePlugTest.whenBritishPersonUsesEuropeanPlugAdaptor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringExpressionTest.ifGivenOneTwoReturnThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.manchesterdigital.designpattern.adaptor.*" />
+          <option name="PATTERN" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.manchesterdigital.designpattern.adaptor" />
-      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.designpattern.adaptor.UsePlugTest" />
-      <option name="METHOD_NAME" value="whenBritishPersonUsesEuropeanPlugAdaptor" />
+      <option name="PACKAGE_NAME" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly" />
+      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.StringExpressionTest" />
+      <option name="METHOD_NAME" value="ifGivenOneTwoReturnThree" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,10 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Arquillian JUnit.BritishPersonTest" />
-        <item itemvalue="Application.UsePlug" />
-        <item itemvalue="JUnit.UsePlugTest.whenBritishPersonUsesEuropeanPlugAdaptor" />
-        <item itemvalue="JUnit.UsePlugTest.europeanPlugTwoProngsReturnsICanWorkInEurope" />
+        <item itemvalue="Application.Triangle" />
+        <item itemvalue="JUnit.StringExpressionTest.ifGivenOnePlusTwoReturnThree" />
+        <item itemvalue="JUnit.StringExpressionTest.ifGivenOneTwoReturnThree" />
+        <item itemvalue="Application.StringCalculatorMain" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -139,6 +181,12 @@
       <option name="presentableId" value="Default" />
       <updated>1571318201087</updated>
       <workItem from="1571318204450" duration="6646000" />
+      <workItem from="1571754709155" duration="1404000" />
+      <workItem from="1571816958065" duration="1494000" />
+      <workItem from="1572007090272" duration="1040000" />
+      <workItem from="1572868304345" duration="4883000" />
+      <workItem from="1572876820169" duration="10247000" />
+      <workItem from="1573044886361" duration="2597000" />
     </task>
     <servers />
   </component>
@@ -150,10 +198,33 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/StringCalculatorTDDOnly/StringExpression.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/StringCalculatorTDDOnly/StringExpression.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/Triangle.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
