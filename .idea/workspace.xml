@@ -2,37 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/StringCalculatorTDDOnly/StringExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/StringCalculatorTDDOnly/WordsForNumberOperatorConversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/Triangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/ryanaircar/Eurocar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/ryanaircar/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/PromotionPrimitiveValues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/Scrambler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/Practice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/NumbersInWords.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/StringExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/WordsForNumbers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/MusifyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/MusifyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/StringExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/StringCalculatorTDDOnly/StringExpressionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/designpatttern/adaptor/BritishPersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/designpatttern/adaptor/BritishPersonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/Practice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/BritishPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/BritishPerson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/BritishPlug.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/BritishPlug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/EuropeanPlug.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/EuropeanPlug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/EuropeanPlugAdaptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/EuropeanPlugAdaptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/UsePlug.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/designpatttern/adaptor/UsePlug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/manchesterdigital/designpattern/adaptor/UsePlugTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/manchesterdigital/designpattern/adaptor/UsePlugTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/manchesterdigital/designpatttern/adaptor/BritishPersonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/manchesterdigital/designpatttern/adaptor/BritishPersonTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/ScramblerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/manchesterdigital/bootcamp/ScramblerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -75,6 +69,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.manchesterdigital.bootcamp" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -88,13 +85,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Triangle">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.Main" />
+  <component name="RunManager" selected="Application.Practice">
+    <configuration name="Practice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.Practice" />
       <module name="playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.*" />
+          <option name="PATTERN" value="com.manchesterdigital.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +99,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringCalculatorMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.StringCalculator.StringCalculatorMain" />
+    <configuration name="PromotionPrimitiveValues" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.PromotionPrimitiveValues" />
       <module name="playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.*" />
+          <option name="PATTERN" value="com.manchesterdigital.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,33 +125,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringExpressionTest.ifGivenOnePlusTwoReturnThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScramblerTest.whenGivenTwoStringsReturnFalseIfDifferentLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.*" />
+          <option name="PATTERN" value="com.manchesterdigital.bootcamp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly" />
-      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.StringExpressionTest" />
-      <option name="METHOD_NAME" value="ifGivenOnePlusTwoReturnThree" />
+      <option name="PACKAGE_NAME" value="com.manchesterdigital.bootcamp" />
+      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.ScramblerTest" />
+      <option name="METHOD_NAME" value="whenGivenTwoStringsReturnFalseIfDifferentLength" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringExpressionTest.ifGivenOneTwoReturnThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScramblerTest.whenGivenTwuStringsReturnTrueIfSameLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.*" />
+          <option name="PATTERN" value="com.manchesterdigital.bootcamp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly" />
-      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.StringCalculatorTDDOnly.StringExpressionTest" />
-      <option name="METHOD_NAME" value="ifGivenOneTwoReturnThree" />
+      <option name="PACKAGE_NAME" value="com.manchesterdigital.bootcamp" />
+      <option name="MAIN_CLASS_NAME" value="com.manchesterdigital.bootcamp.ScramblerTest" />
+      <option name="METHOD_NAME" value="whenGivenTwuStringsReturnTrueIfSameLength" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Practice" />
+        <item itemvalue="JUnit.ScramblerTest.whenGivenTwuStringsReturnTrueIfSameLength" />
+        <item itemvalue="JUnit.ScramblerTest.whenGivenTwoStringsReturnFalseIfDifferentLength" />
+        <item itemvalue="Application.PromotionPrimitiveValues" />
         <item itemvalue="Application.Triangle" />
-        <item itemvalue="JUnit.StringExpressionTest.ifGivenOnePlusTwoReturnThree" />
-        <item itemvalue="JUnit.StringExpressionTest.ifGivenOneTwoReturnThree" />
-        <item itemvalue="Application.StringCalculatorMain" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +183,9 @@
       <workItem from="1572007090272" duration="1040000" />
       <workItem from="1572868304345" duration="4883000" />
       <workItem from="1572876820169" duration="10247000" />
-      <workItem from="1573044886361" duration="2597000" />
+      <workItem from="1573044886361" duration="4676000" />
+      <workItem from="1573463302649" duration="6039000" />
+      <workItem from="1573736421381" duration="1739000" />
     </task>
     <servers />
   </component>
@@ -221,7 +220,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/manchesterdigital/bootcamp/Triangle.java</url>
-          <line>39</line>
+          <line>35</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
