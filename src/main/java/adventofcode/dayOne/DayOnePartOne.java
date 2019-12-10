@@ -35,7 +35,6 @@ public class DayOnePartOne implements Runner {
         return fuelCounterUpper;
     }
 
-        
 
     protected static Integer fuelCalculator (int mass) {
         return (mass / 3) - 2;

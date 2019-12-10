@@ -31,14 +31,34 @@ public class DayOnePartTwo implements Runner {
      */
 
 
+    protected Integer calculateTotalFuelRequirement(StringBuilder mass) {
+        Integer fuelCounterUpper = 0;
+        Integer fuelAdditionalRequirement = 0;
+        String[] split = mass.toString().split("\n");
+
+        for (int i = 0; i < (split.length); i++) {
+            Integer initialFuelAmount = fuelCalculator(Integer.parseInt(split[i]));
+            fuelCounterUpper += initialFuelAmount;
+            Integer additionalFuelCalculation = initialFuelAmount;
+            while (additionalFuelCalculation >= 0){
+                Integer fuel = fuelCalculator(additionalFuelCalculation);
+                if (fuel >=0) {
+                    fuelAdditionalRequirement += fuel;
+                }
+                additionalFuelCalculation = fuel;
+            }
+        }
+        return fuelCounterUpper + fuelAdditionalRequirement;
+    }
 
 
-    // take in inputFile again
-
+    protected static Integer fuelCalculator (int mass) {
+        return (mass / 3) - 2;
+    }
 
     @Override
     public String run(StringBuilder inputFile) {
-        return null;
+        return calculateTotalFuelRequirement(inputFile).toString();
     }
 }
 

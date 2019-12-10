@@ -7,7 +7,7 @@ import java.io.IOException;
 class File {
     //TODO add exceptions + try and catch for importing the file
 
-    static final String DAY_1_PART1 = "/Users/longmuirj/Documents/Practice/playground/playground/DataAdventOfCode/input_dayOne.txt";
+    static final String DAY_1 = "/Users/longmuirj/Documents/Practice/playground/playground/DataAdventOfCode/input_dayOne.txt";
 
     StringBuilder importFile(String inputFile) throws IOException {
         StringBuilder returnString = new StringBuilder();

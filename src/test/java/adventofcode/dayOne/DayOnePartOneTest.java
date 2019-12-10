@@ -40,8 +40,7 @@ public class DayOnePartOneTest {
         mass.append("142278\n");
         String result = dayOne.run(mass);
         Assertions.assertThat(result).isEqualTo("153299");
-
-
-
     }
+
+
 }

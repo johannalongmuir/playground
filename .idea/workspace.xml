@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOnePartTwoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/File.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOnePartOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOnePartOne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOnePartTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOnePartTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOnePartOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOnePartOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOnePartOneTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,10 +37,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -99,20 +101,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AdventOfCode">
-    <configuration name="AdventOfCode (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="andrews.AdventOfCode" />
-      <module name="playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="andrews.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.DayOnePartTwoTest">
     <configuration name="AdventOfCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="adventofcode.AdventOfCode" />
       <module name="playground" />
@@ -126,35 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="andrews.FileTester" />
-      <module name="playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="andrews.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DayOnePartOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode.dayOne" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOnePartOneTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DayOnePartOneTest.whenGivenOneFromTestReturnExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DayOnePartOneTest.whenGivenNewRequirement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="playground" />
       <extension name="coverage">
         <pattern>
@@ -164,7 +125,54 @@
       </extension>
       <option name="PACKAGE_NAME" value="adventofcode.dayOne" />
       <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOnePartOneTest" />
-      <option name="METHOD_NAME" value="whenGivenOneFromTestReturnExpected" />
+      <option name="METHOD_NAME" value="whenGivenNewRequirement" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DayOnePartTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode.dayOne.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode.dayOne" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOnePartTwoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DayOnePartTwoTest.whenGiven100756ToIncludeFuelForMassOfFuel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode.dayOne.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode.dayOne" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOnePartTwoTest" />
+      <option name="METHOD_NAME" value="whenGiven100756ToIncludeFuelForMassOfFuel" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DayOnePartTwoTest.whenGivenRequirementToIncludeFuelForMassOfFuel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode.dayOne.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode.dayOne" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOnePartTwoTest" />
+      <option name="METHOD_NAME" value="whenGivenRequirementToIncludeFuelForMassOfFuel" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DayOnePartTwoTest" />
+        <item itemvalue="JUnit.DayOnePartTwoTest.whenGiven100756ToIncludeFuelForMassOfFuel" />
+        <item itemvalue="JUnit.DayOnePartTwoTest.whenGivenRequirementToIncludeFuelForMassOfFuel" />
         <item itemvalue="Application.AdventOfCode" />
-        <item itemvalue="JUnit.DayOnePartOneTest" />
-        <item itemvalue="JUnit.DayOnePartOneTest.whenGivenOneFromTestReturnExpected" />
-        <item itemvalue="Application.AdventOfCode (1)" />
-        <item itemvalue="Application.FileTester" />
+        <item itemvalue="JUnit.DayOnePartOneTest.whenGivenNewRequirement" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +207,7 @@
       <workItem from="1573044886361" duration="4676000" />
       <workItem from="1573463302649" duration="6039000" />
       <workItem from="1573736421381" duration="1739000" />
-      <workItem from="1575553793586" duration="19632000" />
+      <workItem from="1575553793586" duration="20906000" />
     </task>
     <servers />
   </component>
