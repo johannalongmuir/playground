@@ -3,9 +3,10 @@ package adventofcode.dayOne;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-public class DayOneTest {
+public class DayOnePartOneTest {
 
     // TODO refactor tests.
+    // TODO add negative numbers to test
 
     @Test
     public void whenGiven12Return2() {

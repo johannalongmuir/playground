@@ -30,6 +30,12 @@ public class DayOnePartTwo implements Runner {
      (Calculate the fuel requirements for each module separately, then add them all up at the end.)
      */
 
+
+
+
+    // take in inputFile again
+
+
     @Override
     public String run(StringBuilder inputFile) {
         return null;

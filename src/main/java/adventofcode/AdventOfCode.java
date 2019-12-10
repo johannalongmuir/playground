@@ -19,6 +19,7 @@ public class AdventOfCode {
         File file = new File();
         StringBuilder inputFile = file.importFile(File.DAY_1_PART1);
         Runner runner = new DayOnePartOne();
+        String runInitial = runner.run(inputFile);
 
         System.out.println(runner.run(inputFile));
 

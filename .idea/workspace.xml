@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ListExamples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode/FileEnumChecking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode/Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOnePart2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayTwo/DayTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/andrews/AdventOfCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/andrews/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/andrews/Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/andrews/dayone/FuelCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/StringMethodExamples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/input" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOneTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manchesterdigital/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manchesterdigital/Practice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOnePartOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOnePartOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOnePartTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOnePartTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOnePartOneTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +53,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1SKhTO8Ib8yjIckFKyfyxdxUflQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -149,7 +139,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DayOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DayOnePartOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="playground" />
       <extension name="coverage">
         <pattern>
@@ -158,13 +148,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="adventofcode.dayOne" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOneTest" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOnePartOneTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DayOneTest.whenGivenOneFromTestReturnExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DayOnePartOneTest.whenGivenOneFromTestReturnExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="playground" />
       <extension name="coverage">
         <pattern>
@@ -173,7 +163,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="adventofcode.dayOne" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOneTest" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOnePartOneTest" />
       <option name="METHOD_NAME" value="whenGivenOneFromTestReturnExpected" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -183,8 +173,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.AdventOfCode" />
-        <item itemvalue="JUnit.DayOneTest" />
-        <item itemvalue="JUnit.DayOneTest.whenGivenOneFromTestReturnExpected" />
+        <item itemvalue="JUnit.DayOnePartOneTest" />
+        <item itemvalue="JUnit.DayOnePartOneTest.whenGivenOneFromTestReturnExpected" />
         <item itemvalue="Application.AdventOfCode (1)" />
         <item itemvalue="Application.FileTester" />
       </list>
@@ -209,7 +199,7 @@
       <workItem from="1573044886361" duration="4676000" />
       <workItem from="1573463302649" duration="6039000" />
       <workItem from="1573736421381" duration="1739000" />
-      <workItem from="1575553793586" duration="18892000" />
+      <workItem from="1575553793586" duration="19632000" />
     </task>
     <servers />
   </component>
@@ -228,6 +218,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

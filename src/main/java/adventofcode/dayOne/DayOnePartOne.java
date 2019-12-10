@@ -24,7 +24,7 @@ public class DayOnePartOne implements Runner {
     What is the sum of the fuel requirements for all of the modules on your spacecraft?
      */
 
-    protected Integer calculateFuelRequirement (StringBuilder mass) {
+    protected Integer calculateTotalFuelRequirement(StringBuilder mass) {
         Integer fuelCounterUpper = 0;
         String[] split = mass.toString().split("\n");
 
@@ -35,12 +35,14 @@ public class DayOnePartOne implements Runner {
         return fuelCounterUpper;
     }
 
+        
+
     protected static Integer fuelCalculator (int mass) {
         return (mass / 3) - 2;
     }
 
     @Override
     public String run(StringBuilder inputFile) {
-        return calculateFuelRequirement(inputFile).toString();
+        return calculateTotalFuelRequirement(inputFile).toString();
     }
 }
