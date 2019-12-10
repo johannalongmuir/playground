@@ -34,7 +34,7 @@ public class DayOnePartTwo implements Runner {
     protected Integer calculateTotalFuelRequirement(StringBuilder mass) {
         Integer fuelCounterUpper = 0;
         Integer fuelAdditionalRequirement = 0;
-        String[] split = mass.toString().split("\n");
+        String[] split = splitInput(mass);
 
         for (int i = 0; i < (split.length); i++) {
             Integer initialFuelAmount = fuelCalculator(Integer.parseInt(split[i]));
@@ -51,6 +51,9 @@ public class DayOnePartTwo implements Runner {
         return fuelCounterUpper + fuelAdditionalRequirement;
     }
 
+    protected String[] splitInput (StringBuilder masses) {
+        return masses.toString().split("\n");
+    }
 
     protected static Integer fuelCalculator (int mass) {
         return (mass / 3) - 2;

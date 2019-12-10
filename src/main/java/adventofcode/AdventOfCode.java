@@ -1,6 +1,7 @@
 package adventofcode;
 
 import adventofcode.dayOne.DayOnePartTwo;
+import adventofcode.dayTwo.DayTwo;
 
 import java.io.IOException;
 
@@ -17,11 +18,9 @@ public class AdventOfCode {
 
     public static void main(String[] args) throws IOException {
         File file = new File();
-        StringBuilder inputFile = file.importFile(File.DAY_1);
-
-        Runner runner = new DayOnePartTwo();
+        StringBuilder inputFile = file.importFile(File.DAY_2);
+        Runner runner = new DayTwo();
         System.out.println(runner.run(inputFile));
-
     }
 
 }
