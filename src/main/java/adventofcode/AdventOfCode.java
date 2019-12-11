@@ -1,6 +1,5 @@
 package adventofcode;
 
-import adventofcode.dayOne.DayOnePartTwo;
 import adventofcode.dayTwo.DayTwo;
 
 import java.io.IOException;
