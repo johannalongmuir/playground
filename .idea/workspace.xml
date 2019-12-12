@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/File.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/FeatureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/FeatureHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayTwo/DayTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayTwo/DayTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode/dayOne/DayOneTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode/dayTwo/DayTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode/dayTwo/DayTwoTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="213" />
+    <option name="myElementSize" value="315" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -107,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AdventOfCode">
+  <component name="RunManager" selected="JUnit.DayTwoTest">
     <configuration name="AdventOfCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="adventofcode.AdventOfCode" />
       <module name="playground" />
@@ -121,22 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DayOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode.dayOne.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode.dayOne" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode.dayOne.DayOneTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DayTwoTest.returnResultAtPosition0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DayTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="playground" />
       <extension name="coverage">
         <pattern>
@@ -146,27 +128,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="adventofcode.dayTwo" />
       <option name="MAIN_CLASS_NAME" value="adventofcode.dayTwo.DayTwoTest" />
-      <option name="METHOD_NAME" value="returnResultAtPosition0" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="adventofcode.dayOne in playground" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode.dayOne.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode.dayOne" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="adventofcode.dayTwo in playground" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DayTwoTest.givenFeatureReverseSetToOn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="playground" />
       <extension name="coverage">
         <pattern>
@@ -175,18 +142,52 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="adventofcode.dayTwo" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode.dayTwo.DayTwoTest" />
+      <option name="METHOD_NAME" value="givenFeatureReverseSetToOn" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DayTwoTest.givenInvalidOpcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode.dayTwo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode.dayTwo" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode.dayTwo.DayTwoTest" />
+      <option name="METHOD_NAME" value="givenInvalidOpcode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DayTwoTest.gravityAssistOn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode.dayTwo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode.dayTwo" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode.dayTwo.DayTwoTest" />
+      <option name="METHOD_NAME" value="gravityAssistOn" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DayTwoTest" />
+        <item itemvalue="JUnit.DayTwoTest.givenInvalidOpcode" />
+        <item itemvalue="JUnit.DayTwoTest.givenFeatureReverseSetToOn" />
+        <item itemvalue="JUnit.DayTwoTest.gravityAssistOn" />
         <item itemvalue="Application.AdventOfCode" />
-        <item itemvalue="JUnit.DayTwoTest.returnResultAtPosition0" />
-        <item itemvalue="JUnit.adventofcode.dayTwo in playground" />
-        <item itemvalue="JUnit.adventofcode.dayOne in playground" />
-        <item itemvalue="JUnit.DayOneTest" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +211,7 @@
       <workItem from="1573463302649" duration="6039000" />
       <workItem from="1573736421381" duration="1739000" />
       <workItem from="1575553793586" duration="44778000" />
-      <workItem from="1576142146626" duration="16408000" />
+      <workItem from="1576142146626" duration="23479000" />
     </task>
     <servers />
   </component>
@@ -256,16 +257,6 @@
           <line>24</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/adventofcode/dayTwo/DayTwoTest.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/adventofcode/dayTwo/DayTwo.java</url>
-          <line>218</line>
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -284,7 +275,7 @@
     <SUITE FILE_PATH="coverage/playground$DayOneTest.ic" NAME="DayOneTest Coverage Results" MODIFIED="1575974029132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>adventofcode.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/playground$DayTwoTest.ic" NAME="DayTwoTest Coverage Results" MODIFIED="1576053606085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/playground$DayTwoTest.ic" NAME="DayTwoTest Coverage Results" MODIFIED="1576168428065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>adventofcode.dayTwo.*</FILTER>
     </SUITE>
   </component>

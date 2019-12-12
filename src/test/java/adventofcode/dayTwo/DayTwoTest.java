@@ -4,101 +4,85 @@ import adventofcode.FeatureHandler;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
+import javax.lang.model.element.AnnotationValue;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class DayTwoTest {
 
-    /*--- Day 2: 1202 Program Alarm ---
-
-    Here are the initial and final states of a few more small programs:
-    2,3,0,3,99 becomes 2,3,0,6,99.
-    2,4,4,5,99,0 becomes 2,4,4,5,99,9801.
-    1,1,1,4,99,5,6,0,99 becomes 30,1,1,4,2,5,6,0,99.
-    1,9,10,3,92,3,11,0,9,30,40,50 becomes 3500,9,10,70,2,3,11,0,99,30,40,50
-
-    Restore the gravity assist program (your puzzle input)
-    to the "1202 program alarm" state it had just before the last computer caught fire.
-    To do this, before running the program, replace position 1 with the value 12 and replace
-    position 2 with the value 2.
-    What value is left at position 0 after the program halts?
-
-
-    determine what pair of inputs produces the output 19690720."
-    The inputs should still be provided to the program by replacing the values at addresses 1 and 2, just like before.
-
-
-
-    For example, suppose you have the following program:
-1,9,10,3,2,3,11,0,99,30,40,50
-For the purposes of illustration, here is the same program split into multiple lines:
-1,9,10,3,
-2,3,11,0,
-99,
-30,40,50
-The first four integers, 1,9,10,3, are at positions 0, 1, 2, and 3. Together, they represent the first opcode (1, addition), the positions of the two inputs (9 and 10), and the position of the output (3). To handle this opcode, you first need to get the values at the input positions: position 9 contains 30, and position 10 contains 40. Add these numbers together to get 70. Then, store this value at the output position; here, the output position (3) is at position 3, so it overwrites itself. Afterward, the program looks like this:
-1,9,10,70,
-2,3,11,0,
-99,
-30,40,50
-Step forward 4 positions to reach the next opcode, 2. This opcode works just like the previous, but it multiplies instead of adding. The inputs are at positions 3 and 11; these positions contain 70 and 50 respectively. Multiplying these produces 3500; this is stored at position 0:
-3500,9,10,70,
-2,3,11,0,
-99,
-30,40,50
-
-
-     */
+    private String result;
+    private String intcodeProgram;
+    private List<Integer> resultList;
+    private List<Integer> expectedResults;
 
 
     @Test
-    public void returnResultAtPosition0() {
+    public void whenGivenIntcodeCheckAddressOneContainsCorrectValue() {
         givenAllFeaturesStartOff();
-
-        DayTwo dayTwo = new DayTwo();
-        String result = dayTwo.run("1,0,0,0,99");
-
-        //String result = whenRunDayTwo("1,0,0,0,99");
-
-        Assertions.assertThat(result).isEqualTo("2");
-
-       //thenResultAtAddressOneis("2", result);
+        givenIntcodeProgram("1,0,0,0,99");
+        whenRunDayTwo();
+        thenResultAtAddressZeroisAsString("2");
     }
 
     @Test
-    public void returnExpectedResultResult() {
+    public void whenGivenIntcodeCheckListReturnedisExpected() {
         givenAllFeaturesStartOff();
-        List<Integer> integers = whenRunComputer("1,0,0,0,99");
-        thenResultString("[2, 0, 0, 0, 99]", integers.toString());
+        givenIntcodeProgram("1,0,0,0,99");
+        givenExpectedResults("2,0,0,0,99");
+        whenRunintcodeComputer();
+        thenResultListNotEmpty();
+        thenResultListMatchesExpectedList();
+    }
+
+    @Test
+    public void whenGivenIntcodeProgramWithOpcode2ThenListReturnedMatchesExpected() {
+        givenAllFeaturesStartOff();
+        givenIntcodeProgram("1,9,10,3,2,3,11,0,99,30,40,50");
+        givenExpectedResults("3500,9,10,70,2,3,11,0,99,30,40,50");
+        whenRunintcodeComputer();
+        thenResultListNotEmpty();
+        thenResultListMatchesExpectedList();
     }
 
     @Test
     public void gravityAssistOn() {
         givenAllFeaturesStartOff();
         givenFeatureRestoreGravityAssistSetToTrue();
-        List<Integer> integers = whenRunComputer("1,3,4,0,99,2,3,4,4,5,6,7,7,8,8");
-        Assertions.assertThat(integers.get(1)).isEqualTo(12);
-        Assertions.assertThat(integers.get(2)).isEqualTo(2);
+        givenIntcodeProgram("1,0,0,0,99,1,0,0,0,1,0,0,0,1,0,0,0");
+        whenRunintcodeComputer();
+        thenResultAtAddressOneis(12);
+        thenResultAtAddressTwois(2);
     }
 
-    // TODO complete test for feature reverse + check
-//    @Test
-//    public void givenFeatureReverseSetToOn() {
-//        givenAllFeaturesStartOff();
-//        givenFeatureReverseSetToTrue();
-//
-//    }
+    @Test
+    public void givenFeatureReverseSetToOn() {
+        givenAllFeaturesStartOff();
+        givenFeatureReverseSetToTrue();
+        givenOutputToCheck(19690720);
+        givenFullFileInput();
+        whenRunintcodeComputer();
+        thenResultAtAddressOneis(23);
+        thenResultAtAddressTwois(47);
+    }
+
+    @Test
+    public void givenInvalidOpcode() {
+        // TODO this test doesn't check the output properly.
+        givenAllFeaturesStartOff();
+        givenIntcodeProgram("1,0,0,0,0,0,0,0,99");
+        whenRunDayTwo();
+        thenSystemErrorLogged();
+
+
+    }
+
+
+
 
     private void givenAllFeaturesStartOff() {
         FeatureHandler.FEATURE_RESTORE_GRAVITY_ASSIST = false;
-        FeatureHandler.FEATURE_TEST_RESULT = false;
         FeatureHandler.FEATURE_REVERSE = false;
-    }
-
-
-
-    private StringBuilder givenInputFileContaining(String input) {
-        StringBuilder inputFile = new StringBuilder();
-        return inputFile.append(input);
     }
 
     private void givenFeatureRestoreGravityAssistSetToTrue() {
@@ -109,24 +93,63 @@ Step forward 4 positions to reach the next opcode, 2. This opcode works just 
         FeatureHandler.FEATURE_REVERSE = true;
     }
 
-    private String whenRunDayTwo(String input) {
+
+    private void givenIntcodeProgram(String initialIntcode) {
+        intcodeProgram = initialIntcode;
+    }
+
+    private void givenExpectedResults(String expectedList) {
+        expectedResults = Arrays.stream(expectedList.split(","))
+                .map(Integer::parseInt)
+                .collect(Collectors.toList());
+    }
+
+    private void givenOutputToCheck(Integer outputAt0) {
         DayTwo dayTwo = new DayTwo();
-        return dayTwo.run(input);
+        dayTwo.GRAVITY_ASSIST_OUTPUT_ADDRESS_0 = outputAt0;
     }
 
-    private List<Integer> whenRunComputer(String input) {
-        String  stringBuilder = input;
+    private void givenFullFileInput() {
+        intcodeProgram = "1,0,0,3,1,1,2,3,1,3,4,3,1,5,0,3,2,13,1,19,1,6,19,23,2,6,23,27,1,5,27,31,2,31,9,35,1,35,5," +
+                "39,1,39,5,43,1,43,10,47,2,6,47,51,1,51,5,55,2,55,6,59,1,5,59,63,2,63,6,67,1,5,67,71,1,71,6,75,2,75," +
+                "10,79,1,79,5,83,2,83,6,87,1,87,5,91,2,9,91,95,1,95,6,99,2,9,99,103,2,9,103,107,1,5,107,111,1,111,5," +
+                "115,1,115,13,119,1,13,119,123,2,6,123,127,1,5,127,131,1,9,131,135,1,135,9,139,2,139,6,143,1,143,5," +
+                "147,2,147,6,151,1,5,151,155,2,6,155,159,1,159,2,163,1,9,163,0,99,2,0,14,0";
+    }
+
+
+    private void whenRunDayTwo() {
         DayTwo dayTwo = new DayTwo();
-        return dayTwo.intcodeComputer(stringBuilder);
+        result = dayTwo.run(intcodeProgram);
     }
 
-    private void thenResultAtAddressOneis(String resultSectionOne, String result) {
-        Assertions.assertThat(result).startsWith(resultSectionOne);
-
+    private void whenRunintcodeComputer() {
+        DayTwo dayTwo = new DayTwo();
+        resultList = dayTwo.intcodeComputer(intcodeProgram);
     }
 
-    private void thenResultString(String resultString, String result) {
-        Assertions.assertThat(result).isEqualTo(resultString);
+    private void thenResultAtAddressZeroisAsString(String addressOneExpected) {
+        Assertions.assertThat(result).startsWith(addressOneExpected);
+    }
+    private void thenResultAtAddressOneis(int nounResult) {
+        Assertions.assertThat(resultList.get(1)).isEqualTo(nounResult);
+    }
+    private void thenResultAtAddressTwois(int verbResult) {
+        Assertions.assertThat(resultList.get(2)).isEqualTo(verbResult);
+    }
+
+    private void thenResultListNotEmpty () {
+        Assertions.assertThat(resultList).isNotEmpty();
+    }
+
+    private void thenResultListMatchesExpectedList() {
+        Assertions.assertThat(resultList).containsAll(expectedResults);
+    }
+
+
+
+    private void thenSystemErrorLogged () {
+        System.out.println("need to see how to check log contains expected output");
     }
 
 
