@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/FeatureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/FeatureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayOne/DayOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayTwo/DayTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayTwo/DayTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode/dayTwo/DayTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode/dayTwo/DayTwoTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="315" />
+    <option name="myElementSize" value="327" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -211,7 +205,7 @@
       <workItem from="1573463302649" duration="6039000" />
       <workItem from="1573736421381" duration="1739000" />
       <workItem from="1575553793586" duration="44778000" />
-      <workItem from="1576142146626" duration="23479000" />
+      <workItem from="1576142146626" duration="23745000" />
     </task>
     <servers />
   </component>

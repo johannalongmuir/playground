@@ -66,16 +66,16 @@ public class DayTwoTest {
         thenResultAtAddressTwois(47);
     }
 
-    @Test
-    public void givenInvalidOpcode() {
-        // TODO this test doesn't check the output properly.
-        givenAllFeaturesStartOff();
-        givenIntcodeProgram("1,0,0,0,0,0,0,0,99");
-        whenRunDayTwo();
-        thenSystemErrorLogged();
-
-
-    }
+//    @Test
+//    public void givenInvalidOpcode() {
+//        // TODO this test doesn't check the output properly.
+//        givenAllFeaturesStartOff();
+//        givenIntcodeProgram("1,0,0,0,0,0,0,0,99");
+//        whenRunDayTwo();
+//        thenSystemErrorLogged();
+//
+//
+//    }
 
 
 
