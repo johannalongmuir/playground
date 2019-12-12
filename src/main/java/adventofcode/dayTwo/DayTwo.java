@@ -86,7 +86,7 @@ public class DayTwo implements Runner {
     To do this, before running the program, replace position 1 with the value 12 and replace
     position 2 with the value 2. What value is left at position 0 after the program halts?
 
-"Good, the new computer seems to be working correctly! Keep it nearby during this mission - you'll probably use it again. Real Intcode computers support many more features than your new one, but we'll let you know what they are as you need them."
+    "Good, the new computer seems to be working correctly! Keep it nearby during this mission - you'll probably use it again. Real Intcode computers support many more features than your new one, but we'll let you know what they are as you need them."
 
 "However, your current priority should be to complete your gravity assist around the Moon. For this mission to succeed, we should settle on some terminology for the parts you've already built."
 
@@ -105,87 +105,57 @@ Once the program has halted, its output is available at address 0, also just lik
 Find the input noun and verb that cause the program to produce the output 19690720. What is 100 * noun + verb? (For example, if noun=12 and verb=2, the answer would be 1202.)
      */
 
-    private int MAX_ITERATIONS = 99;
-    private int RESULT_AT_0_FOR_REVERSE = 19690720;
+    private static final int NOUN_ADDRESS_ONE = 1;
+    private static final int VERB_ADDRESS_TWO = 2;
+
+    private int GRAVITY_ASSIST_OUTPUT_ADDRESS_0 = 19690720;
+
+    private String initialState;
+    private List<Integer> intcodeList;
 
 
-    protected List<Integer> computer(List<Integer> integers ) {
+    protected List<Integer> intcodeComputer(String intcodeProgram) {
+        initialState = intcodeProgram;
+
+        splitInput(intcodeProgram);
+
         if (FeatureHandler.FEATURE_REVERSE) {
-            checkForResult(integers, RESULT_AT_0_FOR_REVERSE);
+            gravityAssistOutputConvertToInputs(GRAVITY_ASSIST_OUTPUT_ADDRESS_0);
         } else {
             if (FeatureHandler.FEATURE_RESTORE_GRAVITY_ASSIST) {
-                updatePositionsPartOne(integers);
+                restoreGravityAssistProgramWith1202();
             } else if (FeatureHandler.FEATURE_TEST_RESULT) {
-                updatePositionsTest(integers);
+                pairInputCheck(intcodeList);
             }
-            opcodeDecoder(integers);
+            runIntcode();
         }
-        return integers;
+        return intcodeList;
     }
 
-    protected void opcodeDecoder(List<Integer> integers) {
-        for (int i = 0; i < integers.size() ; i += 4) {
-            if (integers.get(i) == 1) {
-                Integer firstPosition = integers.get(i + 1);
-                Integer secondPosition = integers.get(i + 2);
-                Integer replaceAt = integers.get(i + 3);
-                Integer sum = integers.get(firstPosition) + integers.get(secondPosition);
-                integers.set(replaceAt, sum);
 
-            } else if (integers.get(i) == 2) {
-                Integer firstPosition = integers.get(i + 1);
-                Integer secondPosition = integers.get(i + 2);
-                Integer replaceAt = integers.get(i + 3);
-                Integer sum = integers.get(firstPosition) * integers.get(secondPosition);
-                integers.set(replaceAt, sum);
-            } else if (integers.get(i) == 99) {
+
+
+
+    protected void runIntcode() {
+        for (int instructionPointer = 0; instructionPointer < intcodeList.size() ; instructionPointer += 4) {
+            if (intcodeList.get(instructionPointer) == 99) {
+                // if refactor instructionPointer out then with a 99 increase pointer by 1 but then exits anyway
                 break;
-            } else {
-                System.out.println("invalid");
-            }
-        }
-    }
+            } else if (intcodeList.get(instructionPointer) == 1 || intcodeList.get(instructionPointer) == 2) {
+                int addressOne = intcodeList.get(instructionPointer + NOUN_ADDRESS_ONE);
+                int addressTwo = intcodeList.get(instructionPointer + VERB_ADDRESS_TWO);
+                int replaceAt = intcodeList.get(instructionPointer + 3);
+                int sum;
 
-
-
-    protected void updatePositionsPartOne(List<Integer> integers) {
-      integers.set(1, 12);
-      integers.set(2, 2);
-    }
-
-    protected void updatePositionsTest(List<Integer> integers) {
-        integers.set(1, 23);
-        integers.set(2, 47);
-    }
-
-    protected void checkForResult(List<Integer> integers, int resultAt0) {
-
-        List<Integer> integersAfter = new ArrayList<>(integers);
-        List<Integer> integersInitial = new ArrayList<>(integers);
-
-        for (int i = 0; i < MAX_ITERATIONS; i++) {
-            if (integersAfter.get(0) < resultAt0) {
-                while (integersAfter.get(0) < resultAt0) {
-                    //System.out.println(integersAfter.get(0));
-                    opcodeDecoder(integersInitial);
-                    integersAfter.clear();
-                    integersAfter.addAll(integersInitial);
-                    integersInitial.clear();
-                    integersInitial.addAll(integers);
-                    integersInitial.set(1, (integersAfter.get(1) + 1));
+                if (intcodeList.get(instructionPointer) == 1) {
+                    sum = intcodeList.get(addressOne) + intcodeList.get(addressTwo);
+                    intcodeList.set(replaceAt, sum);
+                } else if (intcodeList.get(instructionPointer) == 2) {
+                    sum = intcodeList.get(addressOne) * intcodeList.get(addressTwo);
+                    intcodeList.set(replaceAt, sum);
                 }
-            } else if (integersAfter.get(0) > resultAt0) {
-                integers.set(2, integers.get(2) + 1);
-                integersInitial.clear();
-                integersInitial.addAll(integers);
-                integersAfter.clear();
-                integersAfter.addAll(integersInitial);
             } else {
-                System.out.println("equals!");
-                System.out.println(integersAfter.get(1));
-                System.out.println(integers.get(2));
-                integers.set(0, integersAfter.get(0));
-                break;
+                System.out.println("Invalid opcode!");
             }
         }
     }
@@ -194,18 +164,60 @@ Find the input noun and verb that cause the program to produce the output 196907
 
 
 
-    protected List<Integer> splitInput(StringBuilder masses) {
-        String stringForSplit = masses.toString();
-        List<Integer> ints = Arrays.stream(stringForSplit.split(","))
+
+
+
+
+
+
+    protected void restoreGravityAssistProgramWith1202() {
+      intcodeList.set(NOUN_ADDRESS_ONE, 12);
+      intcodeList.set(VERB_ADDRESS_TWO, 2);
+    }
+
+    protected void pairInputCheck(List<Integer> integers) {
+        integers.set(NOUN_ADDRESS_ONE, 23);
+        integers.set(VERB_ADDRESS_TWO, 47);
+    }
+
+    protected void gravityAssistOutputConvertToInputs(int resultAt0) {
+        int maximumValue = 99;
+        entryLoop: for (int noun = 0; noun <= maximumValue; noun++) {
+
+            for (int verb = 0; verb <= maximumValue; verb++) {
+                    intcodeList.set(NOUN_ADDRESS_ONE, noun);
+                    intcodeList.set(VERB_ADDRESS_TWO, verb);
+                    runIntcode();
+
+                    if (intcodeList.get(0) == resultAt0) {
+                        break entryLoop;
+                    } else {
+                        resetIntcodeInput();
+                    }
+            }
+        }
+    }
+
+
+
+    private void resetIntcodeInput () {
+        intcodeList.clear();
+        splitInput(initialState);
+    }
+
+
+    private void splitInput(String intcodeString) {
+        intcodeList = Arrays.stream(intcodeString.split(","))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
-        return ints;
     }
+
+
 
     @Override
-    public String run(StringBuilder inputFile) {
-        return computer(splitInput(inputFile)).get(0).toString();
+    public String run(String inputFile) {
+        initialState = inputFile;
+        return intcodeComputer(inputFile).get(0).toString();
     }
-
 
 }

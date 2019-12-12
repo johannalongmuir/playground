@@ -17,9 +17,15 @@ public class AdventOfCode {
 
     public static void main(String[] args) throws IOException {
         File file = new File();
-        StringBuilder inputFile = file.importFile(File.DAY_2);
+        String inputFile = file.importFile(File.DAY_2);
         Runner runner = new DayTwo();
         System.out.println(runner.run(inputFile));
     }
+
+
+    /* Day 2 understanding and Refactor
+
+
+     */
 
 }

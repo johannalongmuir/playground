@@ -33,13 +33,8 @@ public class DayOneTest {
     @Test
     public void whenGivenFiveValuesFromStringBuilderResultCalculates() {
         givenAllFeaturesStartOff();
-        StringBuilder mass = new StringBuilder();
+        String mass = "70219\n" + "93253\n" + "79077\n" + "75104\n" + "142278\n";
         DayOne dayOne = new DayOne();
-        mass.append("70219\n");
-        mass.append("93253\n");
-        mass.append("79077\n");
-        mass.append("75104\n");
-        mass.append("142278\n");
         String result = dayOne.run(mass);
         Assertions.assertThat(result).isEqualTo("153299");
     }
@@ -49,9 +44,8 @@ public class DayOneTest {
     public void whenGivenRequirementToIncludeFuelForMassOfFuel() {
         givenAllFeaturesStartOff();
         givenFeatureMassOfFuelAddedToTotal();
-        StringBuilder mass = new StringBuilder();
+        String mass = "1969\n";
         DayOne dayOne = new DayOne();
-        mass.append("1969\n");
         String result = dayOne.run(mass);
         Assertions.assertThat(result).isEqualTo("966");
     }
@@ -60,9 +54,8 @@ public class DayOneTest {
     public void whenGiven14ncludeFuelForMassOfFuel() {
         givenAllFeaturesStartOff();
         givenFeatureMassOfFuelAddedToTotal();
-        StringBuilder mass = new StringBuilder();
+        String mass = "14\n";
         DayOne dayOne = new DayOne();
-        mass.append("14\n");
         String result = dayOne.run(mass);
         Assertions.assertThat(result).isEqualTo("2");
     }
@@ -71,9 +64,8 @@ public class DayOneTest {
     public void whenGiven100756ToIncludeFuelForMassOfFuel() {
         givenAllFeaturesStartOff();
         givenFeatureMassOfFuelAddedToTotal();
-        StringBuilder mass = new StringBuilder();
+        String mass = "100756\n";
         DayOne dayOne = new DayOne();
-        mass.append("100756\n");
         String result = dayOne.run(mass);
         Assertions.assertThat(result).isEqualTo("50346");
     }

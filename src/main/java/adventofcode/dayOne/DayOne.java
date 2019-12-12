@@ -54,7 +54,7 @@ public class DayOne implements Runner {
 
 
 
-    protected Integer calculateTotalFuelRequirement(StringBuilder mass) {
+    protected Integer calculateTotalFuelRequirement(String mass) {
         Integer fuelCounterUpper = 0;
         String[] split = splitInput(mass);
 
@@ -92,12 +92,12 @@ public class DayOne implements Runner {
 
 
 
-        protected String[] splitInput (StringBuilder masses){
+        protected String[] splitInput (String masses){
             return masses.toString().split("\n");
         }
 
         @Override
-        public String run (StringBuilder inputFile){
+        public String run (String inputFile){
             return calculateTotalFuelRequirement(inputFile).toString();
         }
 }
