@@ -10,8 +10,6 @@ import java.util.stream.Collectors;
 
 public class DayTwo implements Runner {
 
-    // TODO refactor as not very nice
-    // TODO add tests
     // TODO refactor names to make sure can use intcode computer later. Re-read especially over part 2
     // day Two part one is 10566835;
     // day Two part two is 2347
@@ -112,7 +110,6 @@ Find the input noun and verb that cause the program to produce the output 196907
 
 
     protected List<Integer> computer(List<Integer> integers ) {
-        //List<Integer> integers = splitInput(inputFile);
         if (FeatureHandler.FEATURE_REVERSE) {
             checkForResult(integers, RESULT_AT_0_FOR_REVERSE);
         } else {
@@ -123,7 +120,6 @@ Find the input noun and verb that cause the program to produce the output 196907
             }
             opcodeDecoder(integers);
         }
-        //return integers.get(0).toString();
         return integers;
     }
 
