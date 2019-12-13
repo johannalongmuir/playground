@@ -48,9 +48,6 @@ public class DayThree implements Runner {
         return manhattanDistance.toString();
     }
 
-
-
-
     private void splitInputsToDirectionArray(String inputFile) {
         directions = inputFile.split(",");
     }
@@ -58,8 +55,6 @@ public class DayThree implements Runner {
     private void splitInputsToLines(String inputFile) {
         listAlistB = inputFile.split("\n");
     }
-
-
 
     private void plotDirection () {
         ArrayList<String> inputArray = new ArrayList<>();
@@ -97,7 +92,6 @@ public class DayThree implements Runner {
         position.get(0).set(0, "O");
         position.get(locationX).set(locationY, "e");
     }
-
 
     private void positionExistCheck(char directionIndividual, int numberOfSteps) {
         int xPositionCheck = locationX;
@@ -152,7 +146,6 @@ public class DayThree implements Runner {
         }
     }
 
-
     private void maxYSizeCheck(){
         for (ArrayList<String> check : position) {
             if (check.size() > maxYSize) {
@@ -178,13 +171,11 @@ public class DayThree implements Runner {
             for (int i = 0; i < maxYSize; i++) {
                 if (arrayList.get(i) == "."){
                     arrayList.set(i, " ");
-
                 }
             }
         }
     }
-
-
+    
     private void printPositionOnGrid() {
         for (int yAxis = 0; yAxis < maxYSize; yAxis++) {
             StringBuilder stringBuilder = new StringBuilder();
@@ -217,10 +208,6 @@ public class DayThree implements Runner {
         }
 
     }
-
-
-
-
 
     @Override
     public String run(String inputFile) {

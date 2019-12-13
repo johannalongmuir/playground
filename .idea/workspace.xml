@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,6 +202,7 @@
       <workItem from="1576226933498" duration="5914000" />
       <workItem from="1576243177459" duration="17429000" />
       <workItem from="1576270274186" duration="51000" />
+      <workItem from="1576277691191" duration="361000" />
     </task>
     <servers />
   </component>
