@@ -1,5 +1,6 @@
 package adventofcode.dayThree;
 
+import adventofcode.FeatureHandler;
 import adventofcode.Runner;
 
 import java.util.ArrayList;
@@ -23,6 +24,9 @@ public class DayThree implements Runner {
         plotDirection();
         maxYSizeCheck();
         addEmptyPositionValues();
+        if (FeatureHandler.FEATURE_NO_PRINT_PERIODS) {
+            removePeriodsInAllArrays();
+        }
         printPositionOnGrid();
         return "Finish";
     }
@@ -144,24 +148,30 @@ public class DayThree implements Runner {
         }
     }
 
+    private void removePeriodsInAllArrays() {
+        for (ArrayList arrayList : position) {
+            for (int i = 0; i < maxYSize; i++) {
+                if (arrayList.get(i) == "."){
+                    arrayList.set(i, " ");
+
+                }
+            }
+        }
+    }
+
 
     private void printPositionOnGrid() {
         for (int yAxis = 0; yAxis < maxYSize; yAxis++) {
             StringBuilder stringBuilder = new StringBuilder();
-
             for (int xAxis = 0; xAxis < position.size(); xAxis++) {
-
-                if (position.get(xAxis).size() <= yAxis) {
-                    for (int j = 0; j < yAxis; j++) {
-                        position.get(xAxis).add(yAxis, ".");
-                    }
-                }
                 stringBuilder.append(position.get(xAxis).get(yAxis));
             }
             System.out.println(stringBuilder);
         }
 
     }
+
+
 
 
 
