@@ -16,12 +16,15 @@ public class AdventOfCode {
 
     R3,U06,L2,U1,R3,D5,R4,U3,R2,U1
     R3,U06,L2,D2,R4
+
+    U147,R27,D10,R85,U199,R76,U311,R536,D930,R276,U589,L35
  */
 
     public static void main(String[] args) throws IOException {
         File file = new File();
         //String inputFile = file.importFile(File.DAY_3);
-        String inputFile = "R3,U06,L3,D2,R6,U4,R8,D4";
+        //String inputFile = "R3,U06,L2,U1,R3,D5,R4,U3,R2,U1";
+        String inputFile = "R93,U47,L80,U14,R27,D50,L18,D6,R90";
         Runner runner = new DayThree();
         System.out.println(runner.run(inputFile));
     }

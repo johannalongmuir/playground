@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DataAdventOfCode/input_dayThree.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manchesterdigital/AndAnd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/File.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/playground.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -352,18 +347,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java</url>
-          <line>85</line>
+          <line>84</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java</url>
-          <line>119</line>
+          <line>113</line>
           <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

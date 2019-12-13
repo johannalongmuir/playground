@@ -3,7 +3,6 @@ package adventofcode.dayThree;
 import adventofcode.Runner;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DayThree implements Runner {
 
@@ -11,7 +10,6 @@ public class DayThree implements Runner {
     private ArrayList<ArrayList<String>> position = new ArrayList<>();
     private Integer locationX = 0;
     private Integer locationY = 0;
-    //private Integer maxYSize = 0;
 
     // list A, list off the coordinates for each step, e.g R2. |0,0|0,1|0,2|,
     // list B, list off the coordinates for each step.
@@ -20,7 +18,7 @@ public class DayThree implements Runner {
 
 
     private String getManhattanDistance(String inputFile) {
-        splitInputList(inputFile);
+        splitInputsToDirectionArray(inputFile);
         plotDirection();
         printPosition();
         return "end";
@@ -30,7 +28,7 @@ public class DayThree implements Runner {
 
     private void plotDirection () {
         ArrayList<String> inputArray = new ArrayList<>();
-        inputArray.add("*");
+        inputArray.add(" ");
         position.add(0, inputArray);
 
 
@@ -64,10 +62,11 @@ public class DayThree implements Runner {
                 }
             }
         }
-    } // end of Method
+        position.get(0).set(0, "O");
+    }
 
     private void updateContentAtPosition(String lineInput) {
-        if (position.get(locationX).get(locationY).equals("*")) {
+        if (position.get(locationX).get(locationY).equals(".")) {
             position.get(locationX).set(locationY, lineInput);
         } else if (position.get(locationX).get(locationY).equals("-") || position.get(locationX).get(locationY).equals("|")) {
             position.get(locationX).set(locationY, "X");
@@ -103,43 +102,38 @@ public class DayThree implements Runner {
     }
 
     private void yAxisCheck(int yPositionCheck, int xPositionCheck) {
-        if (yPositionCheck >= position.get(xPositionCheck).size()) {    // THIS HERE IS 6 >= 7  ON SECOND RUN AS CHECKING LINE 3
-            // position.get(xPositionCheck).add("*");
+        if (yPositionCheck >= position.get(xPositionCheck).size()) {
             int startValue = position.get(xPositionCheck).size();
-//            if (position.get(xPositionCheck).size() > 0){
-//                startValue = position.get(xPositionCheck).size()-1;
-//            }
-
             for (int i = startValue; i <= yPositionCheck; i++) {
-                position.get(xPositionCheck).add("*");
+                position.get(xPositionCheck).add(".");
             }
         }
     }
 
     private void xAxisCheck(int xPositionCheck) {
         if (xPositionCheck >= position.size()) {
-                ArrayList<String> dummy = new ArrayList();
-                dummy.add("*");
+                ArrayList<String> dummy = new ArrayList<>();
+                dummy.add(".");
                 position.add(dummy);
         }
     }
 
-    private void printPosition() {
 
+    
+    private void printPosition() {
         Integer maxYSize = 0;
-        for (ArrayList check : position) {
+        for (ArrayList<String> check : position) {
             if (check.size() > maxYSize) {
                 maxYSize = check.size();
             }
         }
-
 
         for (int yAxis = 0; yAxis < maxYSize; yAxis++) {
             StringBuilder stringBuilder = new StringBuilder();
             for (int xAxis = 0; xAxis < position.size(); xAxis++) {
                 if (position.get(xAxis).size() <= yAxis) {
                     for (int j = 0; j < yAxis; j++) {
-                        position.get(xAxis).add(yAxis, "*");
+                        position.get(xAxis).add(yAxis, ".");
                     }
                 }
                 stringBuilder.append(position.get(xAxis).get(yAxis));
@@ -149,9 +143,11 @@ public class DayThree implements Runner {
 
     }
 
-    private void splitInputList(String inputFile) {
+    private void splitInputsToDirectionArray(String inputFile) {
         directions = inputFile.split(",");
     }
+
+
 
     @Override
     public String run(String inputFile) {
