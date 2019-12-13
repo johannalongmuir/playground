@@ -95,6 +95,7 @@ public class DayThree implements Runner {
             }
         }
         position.get(0).set(0, "O");
+        position.get(locationX).set(locationY, "e");
     }
 
 
