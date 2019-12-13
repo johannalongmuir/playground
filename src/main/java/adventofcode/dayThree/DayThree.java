@@ -4,9 +4,12 @@ import adventofcode.FeatureHandler;
 import adventofcode.Runner;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class DayThree implements Runner {
 
+    private String[] listAlistB;
     private String[] directions;
     private ArrayList<ArrayList<String>> position = new ArrayList<>();
     private Integer locationX = 0;
@@ -20,9 +23,16 @@ public class DayThree implements Runner {
     // list B, list off the coordinates for each step.
     // then go through and check if double up in line A and B
     // get all doubles, calculate and which ever the lowest get rid of.
-
-
+    
     private String getManhattanDistance(String inputFile) {
+        if (inputFile.contains("\n")) {
+            splitInputsToLines(inputFile);
+            for (String a : listAlistB) {
+                System.out.println(a);
+                inputFile = listAlistB[0];
+            }
+        }
+
         splitInputsToDirectionArray(inputFile);
         plotDirection();
         maxYSizeCheck();
@@ -38,32 +48,17 @@ public class DayThree implements Runner {
         return manhattanDistance.toString();
     }
 
-    private void checkCrossoverlocation() {
-        // TODO this is not refactored to look at locations from lineA and lineB and compare as I have only plotted line A so far
-        // TODO save all x + y positions to a crossover position grid for later;
-        for (int xAxisForCrossover = 0; xAxisForCrossover < position.size(); xAxisForCrossover++) {
-            for (int yAxisForCrossover = 0; yAxisForCrossover < maxYSize; yAxisForCrossover++) {
-                if (position.get(xAxisForCrossover).get(yAxisForCrossover) == "X"){
-                    closestValue(xAxisForCrossover, yAxisForCrossover);
-                    System.out.println("All Crossover Positions = X: " + xAxisForCrossover + ", Y: " + yAxisForCrossover);
-                }
-            }
-        }
-    }
 
-    private void closestValue(int xAxisForCrossover, int yAxisForCrossover) {
-        if (xAxisForCrossover + yAxisForCrossover < manhattanDistance){
-            manhattanDistance = xAxisForCrossover + yAxisForCrossover;
-            finalXAxisForCrossover = xAxisForCrossover;
-            finalYAxisForCrossover = yAxisForCrossover;
-        }
-
-    }
 
 
     private void splitInputsToDirectionArray(String inputFile) {
         directions = inputFile.split(",");
     }
+
+    private void splitInputsToLines(String inputFile) {
+        listAlistB = inputFile.split("\n");
+    }
+
 
 
     private void plotDirection () {
@@ -200,6 +195,27 @@ public class DayThree implements Runner {
 
     }
 
+    private void checkCrossoverlocation() {
+        // TODO this is not refactored to look at locations from lineA and lineB and compare as I have only plotted line A so far
+        // TODO save all x + y positions to a crossover position grid for later;
+        for (int xAxisForCrossover = 0; xAxisForCrossover < position.size(); xAxisForCrossover++) {
+            for (int yAxisForCrossover = 0; yAxisForCrossover < maxYSize; yAxisForCrossover++) {
+                if (position.get(xAxisForCrossover).get(yAxisForCrossover) == "X"){
+                    closestValue(xAxisForCrossover, yAxisForCrossover);
+                    System.out.println("All Crossover Positions = X: " + xAxisForCrossover + ", Y: " + yAxisForCrossover);
+                }
+            }
+        }
+    }
+
+    private void closestValue(int xAxisForCrossover, int yAxisForCrossover) {
+        if (xAxisForCrossover + yAxisForCrossover < manhattanDistance){
+            manhattanDistance = xAxisForCrossover + yAxisForCrossover;
+            finalXAxisForCrossover = xAxisForCrossover;
+            finalYAxisForCrossover = yAxisForCrossover;
+        }
+
+    }
 
 
 
