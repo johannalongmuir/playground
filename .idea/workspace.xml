@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +49,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -86,19 +91,20 @@
       <recent name="com.manchesterdigital.bootcamp" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.All in playground">
+  <component name="RunManager" selected="Application.AdventOfCode">
+    <configuration name="AdventOfCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventofcode.AdventOfCode" />
+      <module name="playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in playground" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="playground" />
       <option name="PACKAGE_NAME" value="" />
@@ -118,22 +124,6 @@
       <option name="PACKAGE_NAME" value="adventofcode.dayTwo" />
       <option name="MAIN_CLASS_NAME" value="adventofcode.dayTwo.DayTwoTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DayTwoTest.givenFeatureReverseSetToOn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode.dayTwo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode.dayTwo" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode.dayTwo.DayTwoTest" />
-      <option name="METHOD_NAME" value="givenFeatureReverseSetToOn" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,13 +160,25 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AdventOfCode" />
         <item itemvalue="JUnit.All in playground" />
         <item itemvalue="JUnit.adventofcode in playground" />
         <item itemvalue="JUnit.DayTwoTest" />
         <item itemvalue="JUnit.DayTwoTest.givenInvalidOpcode" />
-        <item itemvalue="JUnit.DayTwoTest.givenFeatureReverseSetToOn" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -199,6 +201,7 @@
       <workItem from="1573736421381" duration="1739000" />
       <workItem from="1575553793586" duration="44778000" />
       <workItem from="1576142146626" duration="23745000" />
+      <workItem from="1576226933498" duration="243000" />
     </task>
     <servers />
   </component>
@@ -222,22 +225,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="189" key="GridCell.Tab.0.bottom" timestamp="1576227098384">
+    <state width="1398" height="189" key="GridCell.Tab.0.bottom" timestamp="1576227177042">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1398" height="189" key="GridCell.Tab.0.bottom/0.23.1440.821/-3840.-157.1920.1057/-1920.-157.1920.1057@0.23.1440.821" timestamp="1576227098384" />
-    <state width="1398" height="189" key="GridCell.Tab.0.center" timestamp="1576227098383">
+    <state width="1398" height="189" key="GridCell.Tab.0.bottom/0.23.1440.821/-3840.-157.1920.1057/-1920.-157.1920.1057@0.23.1440.821" timestamp="1576227177042" />
+    <state width="1398" height="189" key="GridCell.Tab.0.center" timestamp="1576227177041">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1398" height="189" key="GridCell.Tab.0.center/0.23.1440.821/-3840.-157.1920.1057/-1920.-157.1920.1057@0.23.1440.821" timestamp="1576227098383" />
-    <state width="1398" height="189" key="GridCell.Tab.0.left" timestamp="1576227098382">
+    <state width="1398" height="189" key="GridCell.Tab.0.center/0.23.1440.821/-3840.-157.1920.1057/-1920.-157.1920.1057@0.23.1440.821" timestamp="1576227177041" />
+    <state width="1398" height="189" key="GridCell.Tab.0.left" timestamp="1576227177040">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1398" height="189" key="GridCell.Tab.0.left/0.23.1440.821/-3840.-157.1920.1057/-1920.-157.1920.1057@0.23.1440.821" timestamp="1576227098382" />
-    <state width="1398" height="189" key="GridCell.Tab.0.right" timestamp="1576227098383">
+    <state width="1398" height="189" key="GridCell.Tab.0.left/0.23.1440.821/-3840.-157.1920.1057/-1920.-157.1920.1057@0.23.1440.821" timestamp="1576227177040" />
+    <state width="1398" height="189" key="GridCell.Tab.0.right" timestamp="1576227177041">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1398" height="189" key="GridCell.Tab.0.right/0.23.1440.821/-3840.-157.1920.1057/-1920.-157.1920.1057@0.23.1440.821" timestamp="1576227098383" />
+    <state width="1398" height="189" key="GridCell.Tab.0.right/0.23.1440.821/-3840.-157.1920.1057/-1920.-157.1920.1057@0.23.1440.821" timestamp="1576227177041" />
     <state width="1398" height="257" key="GridCell.Tab.1.bottom" timestamp="1576227085803">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
