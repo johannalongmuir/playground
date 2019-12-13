@@ -10,6 +10,7 @@ public class DayThree implements Runner {
     private ArrayList<ArrayList<String>> position = new ArrayList<>();
     private Integer locationX = 0;
     private Integer locationY = 0;
+    private Integer maxYSize = 0;
 
     // list A, list off the coordinates for each step, e.g R2. |0,0|0,1|0,2|,
     // list B, list off the coordinates for each step.
@@ -20,24 +21,27 @@ public class DayThree implements Runner {
     private String getManhattanDistance(String inputFile) {
         splitInputsToDirectionArray(inputFile);
         plotDirection();
-        printPosition();
-        return "end";
+        maxYSizeCheck();
+        addEmptyPositionValues();
+        printPositionOnGrid();
+        return "Finish";
     }
 
+
+    private void splitInputsToDirectionArray(String inputFile) {
+        directions = inputFile.split(",");
+    }
 
 
     private void plotDirection () {
         ArrayList<String> inputArray = new ArrayList<>();
         inputArray.add(" ");
         position.add(0, inputArray);
-
-
         for (String directionInstruction : directions) {
             char directionHeaded = directionInstruction.charAt(0);
             int numberOfSteps = Integer.parseInt(directionInstruction.substring(1));
             position.get(locationX).set(locationY, "+");
             positionExistCheck(directionHeaded, numberOfSteps);
-
             for (int i = 0; i < numberOfSteps; i++) {
                 switch (directionHeaded) {
                     case 'R':
@@ -63,16 +67,6 @@ public class DayThree implements Runner {
             }
         }
         position.get(0).set(0, "O");
-    }
-
-    private void updateContentAtPosition(String lineInput) {
-        if (position.get(locationX).get(locationY).equals(".")) {
-            position.get(locationX).set(locationY, lineInput);
-        } else if (position.get(locationX).get(locationY).equals("-") || position.get(locationX).get(locationY).equals("|")) {
-            position.get(locationX).set(locationY, "X");
-        } else {
-            position.get(locationX).add(locationY, lineInput);
-        }
     }
 
 
@@ -101,6 +95,15 @@ public class DayThree implements Runner {
         }
     }
 
+
+    private void xAxisCheck(int xPositionCheck) {
+        if (xPositionCheck >= position.size()) {
+            ArrayList<String> dummy = new ArrayList<>();
+            dummy.add(".");
+            position.add(dummy);
+        }
+    }
+
     private void yAxisCheck(int yPositionCheck, int xPositionCheck) {
         if (yPositionCheck >= position.get(xPositionCheck).size()) {
             int startValue = position.get(xPositionCheck).size();
@@ -110,27 +113,44 @@ public class DayThree implements Runner {
         }
     }
 
-    private void xAxisCheck(int xPositionCheck) {
-        if (xPositionCheck >= position.size()) {
-                ArrayList<String> dummy = new ArrayList<>();
-                dummy.add(".");
-                position.add(dummy);
+    private void updateContentAtPosition(String lineInput) {
+        if (position.get(locationX).get(locationY).equals(".")) {
+            position.get(locationX).set(locationY, lineInput);
+        } else if (position.get(locationX).get(locationY).equals("-") || position.get(locationX).get(locationY).equals("|")) {
+            position.get(locationX).set(locationY, "X");
+        } else {
+            position.get(locationX).add(locationY, lineInput);
         }
     }
 
 
-    
-    private void printPosition() {
-        Integer maxYSize = 0;
+    private void maxYSizeCheck(){
         for (ArrayList<String> check : position) {
             if (check.size() > maxYSize) {
                 maxYSize = check.size();
             }
         }
+    }
 
+    private void addEmptyPositionValues() {
+        for (int yAxis = 0; yAxis < maxYSize; yAxis++) {
+            for (int xAxis = 0; xAxis < position.size(); xAxis++) {
+                if (position.get(xAxis).size() <= yAxis) {
+                    for (int j = 0; j < yAxis; j++) {
+                        position.get(xAxis).add(yAxis, ".");
+                    }
+                }
+            }
+        }
+    }
+
+
+    private void printPositionOnGrid() {
         for (int yAxis = 0; yAxis < maxYSize; yAxis++) {
             StringBuilder stringBuilder = new StringBuilder();
+
             for (int xAxis = 0; xAxis < position.size(); xAxis++) {
+
                 if (position.get(xAxis).size() <= yAxis) {
                     for (int j = 0; j < yAxis; j++) {
                         position.get(xAxis).add(yAxis, ".");
@@ -143,9 +163,6 @@ public class DayThree implements Runner {
 
     }
 
-    private void splitInputsToDirectionArray(String inputFile) {
-        directions = inputFile.split(",");
-    }
 
 
 
