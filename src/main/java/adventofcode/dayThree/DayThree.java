@@ -32,21 +32,25 @@ public class DayThree implements Runner {
                 inputFile = listAlistB[0];
             }
         }
-
-        splitInputsToDirectionArray(inputFile);
-        plotDirection();
-        maxYSizeCheck();
-        addEmptyPositionValues();
-        if (FeatureHandler.FEATURE_NO_PRINT_PERIODS) {
-            removePeriodsInAllArrays();
+        if (FeatureHandler.SIMPLE_CHECK_ONLY) {
+            justLineAAndBCrossoverCheck();
+        } else {
+            splitInputsToDirectionArray(inputFile);
+            plotDirection();
+            maxYSizeCheck();
+            addEmptyPositionValues();
+            if (FeatureHandler.FEATURE_NO_PRINT_PERIODS) {
+                removePeriodsInAllArrays();
+            }
+            if (FeatureHandler.FEATURE_PRINT_GRID) {
+                printPositionOnGrid();
+            }
+            checkCrossoverlocation();
         }
-        if (FeatureHandler.FEATURE_PRINT_GRID) {
-            printPositionOnGrid();
-        }
-        checkCrossoverlocation();
-        System.out.println("ManhattanDistance coordinates = X: " + finalXAxisForCrossover + ", Y: " + finalYAxisForCrossover);
+        //System.out.println("ManhattanDistance coordinates = X: " + finalXAxisForCrossover + ", Y: " + finalYAxisForCrossover);
         return manhattanDistance.toString();
     }
+
 
     private void splitInputsToDirectionArray(String inputFile) {
         directions = inputFile.split(",");
@@ -175,7 +179,7 @@ public class DayThree implements Runner {
             }
         }
     }
-    
+
     private void printPositionOnGrid() {
         for (int yAxis = 0; yAxis < maxYSize; yAxis++) {
             StringBuilder stringBuilder = new StringBuilder();
@@ -206,7 +210,41 @@ public class DayThree implements Runner {
             finalXAxisForCrossover = xAxisForCrossover;
             finalYAxisForCrossover = yAxisForCrossover;
         }
+    }
 
+    private void justLineAAndBCrossoverCheck() {
+        Integer xInt = 0;
+        Integer yInt = 0;
+        for (String inputString : listAlistB) {
+            String[] tester = inputString.split(",");
+            for (String directionCheck : tester) {
+                char directionHeaded = directionCheck.charAt(0);
+                int numberOfSteps = Integer.parseInt(directionCheck.substring(1));
+                for (int i = 0; i < numberOfSteps; i++) {
+                    switch (directionHeaded) {
+                        case 'R':
+                            xInt += 1;
+                            System.out.println("X is " + xInt + " , Y is " + yInt);
+                            break;
+                        case 'L':
+                            xInt -= 1;
+                            System.out.println("X is " + xInt + " , Y is " + yInt);
+                            break;
+                        case 'U':
+                            yInt += 1;
+                            System.out.println("X is " + xInt + " , Y is " + yInt);
+                            break;
+                        case 'D':
+                            yInt -= 1;
+                            System.out.println("X is " + xInt + " , Y is " + yInt);
+                            break;
+                        default:
+                            System.out.println("Error");
+                    }
+                }
+
+            }
+        }
     }
 
     @Override
