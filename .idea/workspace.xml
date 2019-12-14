@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f8ddcbf-8c3c-4598-92c1-6148e4d09331" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/FeatureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/FeatureHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java" afterDir="false" />
     </list>
@@ -345,6 +346,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/ListExamples.java</url>
           <line>24</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

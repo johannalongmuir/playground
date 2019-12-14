@@ -2,9 +2,9 @@ package adventofcode.dayThree;
 
 import adventofcode.FeatureHandler;
 import adventofcode.Runner;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class DayThree implements Runner {
@@ -12,12 +12,15 @@ public class DayThree implements Runner {
     private String[] listAlistB;
     private String[] directions;
     private ArrayList<ArrayList<String>> position = new ArrayList<>();
+    private ArrayList<List<String>> allLists = new ArrayList<>();
+    private ArrayList<String> matchList = new ArrayList<>();
     private Integer locationX = 0;
     private Integer locationY = 0;
     private Integer maxYSize = 0;
     private Integer finalXAxisForCrossover;
     private Integer finalYAxisForCrossover;
     private Integer manhattanDistance = Integer.MAX_VALUE;
+    int totalABListSteps = Integer.MAX_VALUE;
 
     // list A, list off the coordinates for each step, e.g R2. |0,0|0,1|0,2|,
     // list B, list off the coordinates for each step.
@@ -28,12 +31,16 @@ public class DayThree implements Runner {
         if (inputFile.contains("\n")) {
             splitInputsToLines(inputFile);
             for (String a : listAlistB) {
-                System.out.println(a);
                 inputFile = listAlistB[0];
             }
         }
         if (FeatureHandler.SIMPLE_CHECK_ONLY) {
             justLineAAndBCrossoverCheck();
+            filterForMatches();
+            if(FeatureHandler.NUMBEROFSTEPSTOREACHMANHATTAN) {
+                numberOfStepsCalculation();
+                System.out.println("Lowest Total A/B Steps = " + totalABListSteps);
+            }
         } else {
             splitInputsToDirectionArray(inputFile);
             plotDirection();
@@ -47,8 +54,50 @@ public class DayThree implements Runner {
             }
             checkCrossoverlocation();
         }
-        //System.out.println("ManhattanDistance coordinates = X: " + finalXAxisForCrossover + ", Y: " + finalYAxisForCrossover);
+        System.out.println("ManhattanDistance coordinates = X: " + finalXAxisForCrossover + ", Y: " + finalYAxisForCrossover);
+
         return manhattanDistance.toString();
+    }
+
+    private void numberOfStepsCalculation() {
+        for (String match : matchList) {
+            int checkAB = 0;
+            for (List<String> a : allLists) {
+                System.out.println("Number of Steps" + a.indexOf(match));
+                checkAB += a.indexOf(match);
+            }
+            if(totalABListSteps > checkAB) {
+                totalABListSteps = checkAB;
+            }
+        }
+    }
+
+    private void filterForMatches() {
+        outermost: for (int i = 0; i < allLists.size() - 1; i++) {
+            middle: for (int j = 0; j < allLists.get(i).size(); j++) {
+            if (allLists.get(i).get(j).contains("terminate")) {
+                        break middle;
+            }
+                inner: for (int k = 1; k < allLists.get(i+1).size(); k++) {
+                    if (allLists.get(i).get(j).equals(allLists.get(i + 1).get(k))) {
+                        if (allLists.get(i + 1).get(k).contains("terminate")) {
+                            break inner;
+                        }
+
+                        matchList.add(allLists.get(i).get(j));
+                        String toSplit = allLists.get(i).get(j).substring(1);
+                        String [] axis = toSplit.split("Y");
+//                        System.out.println(Integer.parseInt(axis[0]));
+//                        System.out.println(Integer.parseInt(axis[1]));
+
+                        closestValue(Integer.parseInt(axis[0]), Integer.parseInt(axis[1]));
+
+                    }
+                }
+
+            }
+
+        }
     }
 
 
@@ -206,44 +255,55 @@ public class DayThree implements Runner {
 
     private void closestValue(int xAxisForCrossover, int yAxisForCrossover) {
         if (xAxisForCrossover + yAxisForCrossover < manhattanDistance){
-            manhattanDistance = xAxisForCrossover + yAxisForCrossover;
+            int xAxisNoNeg = xAxisForCrossover;
+            int yAxisNoNeg = yAxisForCrossover;
+            if (xAxisNoNeg < 0) {
+                xAxisNoNeg = Math.abs(xAxisNoNeg);
+            }
+            if (yAxisNoNeg < 0 ){
+                yAxisNoNeg = Math.abs(yAxisNoNeg);
+            }
+            manhattanDistance = xAxisNoNeg + yAxisNoNeg;
             finalXAxisForCrossover = xAxisForCrossover;
             finalYAxisForCrossover = yAxisForCrossover;
         }
     }
 
     private void justLineAAndBCrossoverCheck() {
-        Integer xInt = 0;
-        Integer yInt = 0;
+        int xInt = 0;
+        int yInt = 0;
         for (String inputString : listAlistB) {
+            List<String> coordinates = new ArrayList<>();
             String[] tester = inputString.split(",");
             for (String directionCheck : tester) {
                 char directionHeaded = directionCheck.charAt(0);
                 int numberOfSteps = Integer.parseInt(directionCheck.substring(1));
                 for (int i = 0; i < numberOfSteps; i++) {
+                    coordinates.add("X" + xInt + "Y" + yInt);
                     switch (directionHeaded) {
                         case 'R':
                             xInt += 1;
-                            System.out.println("X is " + xInt + " , Y is " + yInt);
                             break;
                         case 'L':
                             xInt -= 1;
-                            System.out.println("X is " + xInt + " , Y is " + yInt);
                             break;
                         case 'U':
                             yInt += 1;
-                            System.out.println("X is " + xInt + " , Y is " + yInt);
                             break;
                         case 'D':
                             yInt -= 1;
-                            System.out.println("X is " + xInt + " , Y is " + yInt);
                             break;
                         default:
                             System.out.println("Error");
                     }
+
                 }
 
             }
+            xInt = 0;
+            yInt = 0;
+            coordinates.add("terminate");
+            allLists.add(coordinates);
         }
     }
 
