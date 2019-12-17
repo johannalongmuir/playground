@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/AdventOfCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/FeatureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/FeatureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode/dayTwo/DayTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode/dayTwo/DayTwoTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -349,7 +349,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/adventofcode/dayThree/DayThree.java</url>
-          <line>94</line>
+          <line>92</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>

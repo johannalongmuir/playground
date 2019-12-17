@@ -24,8 +24,8 @@ public class AdventOfCode {
 
     public static void main(String[] args) throws IOException {
         File file = new File();
-        String inputFile = file.importFile(File.DAY_3);
-        //String inputFile = "R93,U47,L80,U14,R27,D50,L18,D6,R90";
+        //String inputFile = file.importFile(File.DAY_3);
+        String inputFile = "R93,U47,L80,U14,R27,D50,L18,D6,R90,U14,L25,D6,R19";
         //String inputFile = "R10,U013,L3,D2,R6,U4,R3,D6,L9,D2,R6,D3,L10,U2,R2,D4\nR5";
         Runner runner = new DayThree();
         System.out.println(runner.run(inputFile));

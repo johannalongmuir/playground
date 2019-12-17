@@ -31,7 +31,6 @@ public class DayTwoTest {
         givenIntcodeProgram("1,0,0,0,99");
         givenExpectedResults("2,0,0,0,99");
         whenRunintcodeComputer();
-        thenResultListNotEmpty();
         thenResultListMatchesExpectedList();
     }
 
@@ -41,7 +40,6 @@ public class DayTwoTest {
         givenIntcodeProgram("1,9,10,3,2,3,11,0,99,30,40,50");
         givenExpectedResults("3500,9,10,70,2,3,11,0,99,30,40,50");
         whenRunintcodeComputer();
-        thenResultListNotEmpty();
         thenResultListMatchesExpectedList();
     }
 
@@ -73,8 +71,6 @@ public class DayTwoTest {
 //        givenIntcodeProgram("1,0,0,0,0,0,0,0,99");
 //        whenRunDayTwo();
 //        thenSystemErrorLogged();
-//
-//
 //    }
 
 
@@ -134,6 +130,7 @@ public class DayTwoTest {
     private void thenResultAtAddressOneis(int nounResult) {
         Assertions.assertThat(resultList.get(1)).isEqualTo(nounResult);
     }
+
     private void thenResultAtAddressTwois(int verbResult) {
         Assertions.assertThat(resultList.get(2)).isEqualTo(verbResult);
     }
