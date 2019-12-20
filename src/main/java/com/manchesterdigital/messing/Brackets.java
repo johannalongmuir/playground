@@ -3,60 +3,78 @@ package com.manchesterdigital.messing;
 public class Brackets {
 
     public static void main(String[] args) {
-        String input = CheckRemoveAllButBraces.onlyBracketsSetup();
+        //String input = CheckRemoveAllButBraces.onlyBracketsSetup();
+        String input = "{()(({)(())){{}{}({})}}";
         findBracket(input);
     }
 
     private static void findBracket(String input) {
-        String noBrackets = input.replaceAll("\\(\\)", "..");
-        String noBraces = noBrackets.replaceAll("\\{\\}", "..");
+        String noBrackets = input;
+        for (int i = 0; i < 10; i++) {
+            if (noBrackets.contains("()")) {
+                noBrackets = noBrackets.replaceAll("\\(\\)", "");
+                //String noBraces = noBrackets.replaceAll("\\{}", "..");
+                System.out.println(noBrackets);
+            }
+        }
+
+
+        //String noBrackets = input.replaceAll("\\(\\)", "..");
+        String noBraces = noBrackets.replaceAll("\\{}", "..");
 
         StringBuilder removedString = new StringBuilder(noBraces);
+
+        boolean result = false;
 
 
         long countClosingBracker = removedString.chars().filter(ch -> ch == ')').count();
 
-        for (int i = 0; i < countClosingBracker; i++) {
+        mainLoop: for (int i = 0; i < countClosingBracker; i++) {
             int closingBracket = removedString.indexOf(")");
             int findOpenBracket = closingBracket - 1;
             for (int j = 0; j < 50; j++) {
                 char open = removedString.charAt(findOpenBracket);
                 if (open == '.') {
                     --findOpenBracket;
-                } else if (open == '{') {
-                    System.out.println("Error");
-                } else {
+                } else if (open == '(') {
                     break;
+                } else {
+                    System.out.println("Opening bracket for ) at index " + closingBracket + " not found");
+                    break mainLoop;
                 }
             }
             removedString.setCharAt(closingBracket, '.');
             removedString.setCharAt(findOpenBracket, '.');
         }
-
-        System.out.println(removedString);
 
         long countClosingBrace= removedString.chars().filter(ch -> ch == '}').count();
 
-        for (int i = 0; i < countClosingBrace; i++) {
-            int closingBracket = removedString.indexOf("}");
-            int findOpenBracket = closingBracket - 1;
-            for (int j = 0; findOpenBracket >= 0; j++) {
-                char open = removedString.charAt(findOpenBracket);
-                if (open == '.') {
-                    --findOpenBracket;
-                } else if (open == '(') {
-                    System.out.println("Error");
-                } else {
-                    break;
+        if (removedString.toString().contains("(") || removedString.toString().contains(")")) {
+            System.out.println("Out of bounds");
+        } else  {
+            outerLoop:
+            for (int i = 0; i < countClosingBrace; i++) {
+                int closingBracket = removedString.indexOf("}");
+                int findOpenBracket = closingBracket - 1;
+                for (int j = 0; findOpenBracket >= 0; j++) {
+                    char open = removedString.charAt(findOpenBracket);
+                    if (open == '.') {
+                        --findOpenBracket;
+                    } else if (open == '{') {
+                        break;
+                    } else {
+                        System.out.println("Improper opening bracket for } at index" + closingBracket);
+                        break outerLoop;
+                    }
                 }
+                removedString.setCharAt(closingBracket, '.');
+                removedString.setCharAt(findOpenBracket, '.');
             }
-            removedString.setCharAt(closingBracket, '.');
-            removedString.setCharAt(findOpenBracket, '.');
         }
-        System.out.println(removedString);
+
         String check = removedString.toString().replaceAll("\\.", "");
         System.out.println(check);
-        boolean result = check.length() == 0;
+        result = check.length() == 0;
 
         System.out.println(result);
 
@@ -66,66 +84,15 @@ public class Brackets {
 
 
 
-//            for (int j = 0; j < 15; j++) {
-                //int leftIndex = positionBegin;
-                //int rightIndex = positionBegin;
-//                char left = myString.charAt(leftIndex);
-//                char right = myString.charAt(rightIndex);
-//
-//                for (int k = 0; k < myString.length(); k++) {
-//                    if (right != ')') {
-//                        if (right != '}') {
-//                        ++rightIndex;
-//                        right = myString.charAt(positionBegin + rightIndex);
-//                        } else {
-//                            break;
-//                        }
-//                    } else {
-//                        break;
-//                    }
-//                }
-//
-//                for (int d = 0; d < myString.length(); d++) {
-//                    if (left == '.') {
-//                        --leftIndex;
-//                        left = myString.charAt(positionBegin + leftIndex);
-//                    } else {
-//                        break;
-//                    }
-//                }
-//
-//
-//                for (int e = 0; e < myString.length(); e++) {
-//                    if (left == '.') {
-//
-//                    } else {
-//                        break;
-//                    }
-//
-//                }
-//
-//
-//
-//                if (left == '(' && right == ')') {
-//                    myString.setCharAt(positionBegin + leftIndex, '.');
-//                    myString.setCharAt(positionBegin + rightIndex, '.');
-//                    --leftIndex;
-//                    ++rightIndex;
-//                } else if (left == '{' && right == '}') {
-//                    myString.setCharAt(positionBegin + leftIndex, '.');
-//                    myString.setCharAt(positionBegin + rightIndex, '.');
-//                    --leftIndex;
-//                    ++rightIndex;
-//                } else {
-//                    break;
-//            }
-//        }
-
-        //System.out.println(myString);
 
 
 
-    //}
+
+
+
+
+
+
 
 
     public static boolean isClosed(String input) {

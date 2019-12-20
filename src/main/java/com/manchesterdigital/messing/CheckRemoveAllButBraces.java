@@ -2,10 +2,6 @@ package com.manchesterdigital.messing;
 
 public class CheckRemoveAllButBraces {
 
-    public static void main(String[] args) {
-        onlyBracketsSetup();
-    }
-
     public static String onlyBracketsSetup() {
         String input = "public class DayThree implements Runner {\n" +
                 "\n" +
