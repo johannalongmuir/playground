@@ -24,6 +24,8 @@ public class FuelCalculator implements Runner {
         return Integer.valueOf(s);
     }
 
+
+
     private Integer calculateFuelRequirement() {
         return masses.stream()
                 .map(mass -> calculateFuelForMass(mass, mass))

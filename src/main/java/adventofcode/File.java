@@ -13,14 +13,13 @@ class File {
 
     String importFile(String inputFile) throws IOException {
         StringBuilder returnString = new StringBuilder();
-        try (FileReader fr = new FileReader(inputFile)) {
-            BufferedReader br = new BufferedReader(fr);
+            BufferedReader br = new BufferedReader(new FileReader(inputFile));
             int i;
             while ((i = br.read()) != -1) {
                 returnString.append((char) i);
             }
             br.close();
-        }
+
         return returnString.toString();
     }
 }

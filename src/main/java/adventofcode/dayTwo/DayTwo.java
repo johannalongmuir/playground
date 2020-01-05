@@ -10,7 +10,6 @@ public class DayTwo implements Runner {
 
     private static final int NOUN_ADDRESS_ONE = 1;
     private static final int VERB_ADDRESS_TWO = 2;
-
     protected int GRAVITY_ASSIST_OUTPUT_ADDRESS_0 = 19690720;
 
     private String initialState;
@@ -76,6 +75,8 @@ public class DayTwo implements Runner {
       intcodeList.set(VERB_ADDRESS_TWO, 2);
     }
 
+
+
     protected void gravityAssistOutputConvertToInputs(int resultAt0) {
         int maximumValue = 99;
         entryLoop: for (int noun = 0; noun <= maximumValue; noun++) {
@@ -114,7 +115,6 @@ public class DayTwo implements Runner {
 
     @Override
     public String run(String inputFile) {
-        initialState = inputFile;
         return intcodeComputer(inputFile).get(0).toString();
     }
 
